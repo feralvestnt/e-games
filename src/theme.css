@@ -1,0 +1,17 @@
+:root {
+  --brand-dark: #1f4d3a;
+  --brand: #2f7d59;
+  --brand-light: #e6f3ec;
+  --surface: #f4f6f5;
+}
+
+body { background: var(--surface); }
+.bg-gray-800, .bg-gray-900 { background-color: var(--brand-dark) !important; }
+.bg-orange-500, .bg-orange-100 { background-color: var(--brand-light) !important; }
+.text-orange-600, .text-orange-700 { color: var(--brand) !important; }
+.border-\[\#FF9933\] { border-color: var(--brand) !important; }
+.bg-\[\#FF9933\], .bg-\[\#5B9A5B\] { background-color: var(--brand) !important; }
+.text-\[\#CC5A00\], .text-\[\#2e7d32\] { color: var(--brand-dark) !important; }
+.bg-\[\#e8f5e8\] { background-color: var(--brand-light) !important; }
+.has-text-warning { color: var(--brand) !important; }
+.button.is-small.is-fullwidth { color: white; }
