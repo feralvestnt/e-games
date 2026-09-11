@@ -1,35 +1,21 @@
-# Castalla Cinevva Native
+# Castalla Master V2 Playable
 
-This is the clean replacement package.
+Adds gameplay-ready access and defensive circulation to the previous Castalla master.
 
-Delete all previous Castalla terrain/castle files from the repository before using this package.
+Included:
+- hill/terrain;
+- castle;
+- approximate continuous access road to the east gate;
+- east and west walkable wall-walks;
+- parapets and merlons;
+- stairs from the Pati d'Armes to both wall-walks;
+- Torre Grossa top combat platform;
+- gate, wall, tower guard and archer anchors;
+- patrol routes;
+- collision meshes.
 
-## Repository structure
+Primary asset:
+`models/castalla_master_v2.glb`
 
-Castalla/
-├── terrain/
-│   ├── heightmap_16bit.png
-│   ├── heightmap_preview.png
-│   ├── terrain.json
-│   └── terrain_reference.glb
-├── castle/
-│   ├── castle.glb
-│   └── placement.json
-├── config/
-│   ├── world.json
-│   └── validation.json
-├── docs/
-│   └── CINEVVA_IMPORT.txt
-├── manifest.json
-└── README.md
-
-## Primary workflow
-
-1. Build terrain from the 16-bit heightmap.
-2. Apply the exact dimensions in terrain.json.
-3. Load castle.glb at identity transform.
-4. Never use automatic ground placement for the castle.
-5. Validate terrain/castle contact before adding anything else.
-
-The heightmap is the primary terrain source.
-The GLB terrain file exists only as a visual reference / fallback.
+Important:
+The access road follows the current terrain and known east-gate approach, but is still an approximation rather than exact survey-derived road geometry.

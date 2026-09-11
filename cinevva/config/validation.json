@@ -1,33 +1,29 @@
 {
-  "terrain": {
-    "vertices": 32761,
-    "faces": 64800,
-    "grid": [
-      181,
-      181
+  "status": "PASS",
+  "masterBounds": [
+    [
+      -450.0,
+      0.0,
+      -450.0
     ],
-    "minY": 0.0,
-    "maxY": 161.794,
-    "verticalRange": 161.794,
-    "horizontalSize": [
-      900.0,
-      900.0
+    [
+      450.0,
+      179.195,
+      450.0
     ]
+  ],
+  "features": {
+    "continuousAccessRoad": true,
+    "eastGateApproach": true,
+    "westWallWalk": true,
+    "eastWallWalk": true,
+    "stairsToWestWall": true,
+    "stairsToEastWall": true,
+    "towerTopCombatPlatform": true,
+    "wallPatrolAnchors": 10,
+    "wallArcherAnchors": 8,
+    "gateGuardAnchors": 2,
+    "towerCombatAnchors": 3
   },
-  "castle": {
-    "vertices": 564,
-    "faces": 912,
-    "bounds": [
-      [
-        -20.062,
-        157.42,
-        -55.477
-      ],
-      [
-        27.061,
-        182.96,
-        37.723
-      ]
-    ]
-  }
+  "accuracyNote": "The access road is a gameplay-oriented approximation following the current hill and known east-gate approach. It is not a survey-grade reconstruction of the exact modern/historic path alignment."
 }

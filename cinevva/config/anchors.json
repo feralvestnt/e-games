@@ -1,0 +1,311 @@
+{
+  "units": "meters",
+  "axes": {
+    "x": "east",
+    "y": "up",
+    "z": "north"
+  },
+  "anchors": [
+    {
+      "id": "road_start",
+      "position": [
+        180.0,
+        66.923,
+        -170.0
+      ],
+      "type": "navigation"
+    },
+    {
+      "id": "road_mid_01",
+      "position": [
+        110.0,
+        107.475,
+        -105.0
+      ],
+      "type": "navigation"
+    },
+    {
+      "id": "road_mid_02",
+      "position": [
+        58.0,
+        151.766,
+        -25.0
+      ],
+      "type": "navigation"
+    },
+    {
+      "id": "castle_main_gate",
+      "position": [
+        21.5,
+        160.041,
+        6.0
+      ],
+      "type": "navigation"
+    },
+    {
+      "id": "wall_patrol_west_01",
+      "position": [
+        -15.2,
+        167.116,
+        -23.0
+      ],
+      "type": "patrol",
+      "group": "west_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_west_02",
+      "position": [
+        -15.2,
+        167.116,
+        -16.0
+      ],
+      "type": "patrol",
+      "group": "west_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_west_03",
+      "position": [
+        -15.2,
+        167.116,
+        -9.0
+      ],
+      "type": "patrol",
+      "group": "west_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_west_04",
+      "position": [
+        -15.2,
+        167.116,
+        -2.0
+      ],
+      "type": "patrol",
+      "group": "west_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_west_05",
+      "position": [
+        -15.2,
+        167.116,
+        4.0
+      ],
+      "type": "patrol",
+      "group": "west_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_east_01",
+      "position": [
+        15.2,
+        167.116,
+        -23.0
+      ],
+      "type": "patrol",
+      "group": "east_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_east_02",
+      "position": [
+        15.2,
+        167.116,
+        -16.0
+      ],
+      "type": "patrol",
+      "group": "east_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_east_03",
+      "position": [
+        15.2,
+        167.116,
+        -9.0
+      ],
+      "type": "patrol",
+      "group": "east_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_east_04",
+      "position": [
+        15.2,
+        167.116,
+        -2.0
+      ],
+      "type": "patrol",
+      "group": "east_wall_patrol"
+    },
+    {
+      "id": "wall_patrol_east_05",
+      "position": [
+        15.2,
+        167.116,
+        4.0
+      ],
+      "type": "patrol",
+      "group": "east_wall_patrol"
+    },
+    {
+      "id": "wall_archer_west_01",
+      "position": [
+        -15.4,
+        167.116,
+        -20.0
+      ],
+      "type": "archer",
+      "facing": "outward",
+      "cover": "parapet"
+    },
+    {
+      "id": "wall_archer_west_02",
+      "position": [
+        -15.4,
+        167.116,
+        -12.0
+      ],
+      "type": "archer",
+      "facing": "outward",
+      "cover": "parapet"
+    },
+    {
+      "id": "wall_archer_west_03",
+      "position": [
+        -15.4,
+        167.116,
+        -4.0
+      ],
+      "type": "archer",
+      "facing": "outward",
+      "cover": "parapet"
+    },
+    {
+      "id": "wall_archer_west_04",
+      "position": [
+        -15.4,
+        167.116,
+        2.0
+      ],
+      "type": "archer",
+      "facing": "outward",
+      "cover": "parapet"
+    },
+    {
+      "id": "wall_archer_east_01",
+      "position": [
+        15.4,
+        167.116,
+        -20.0
+      ],
+      "type": "archer",
+      "facing": "outward",
+      "cover": "parapet"
+    },
+    {
+      "id": "wall_archer_east_02",
+      "position": [
+        15.4,
+        167.116,
+        -12.0
+      ],
+      "type": "archer",
+      "facing": "outward",
+      "cover": "parapet"
+    },
+    {
+      "id": "wall_archer_east_03",
+      "position": [
+        15.4,
+        167.116,
+        -4.0
+      ],
+      "type": "archer",
+      "facing": "outward",
+      "cover": "parapet"
+    },
+    {
+      "id": "wall_archer_east_04",
+      "position": [
+        15.4,
+        167.116,
+        2.0
+      ],
+      "type": "archer",
+      "facing": "outward",
+      "cover": "parapet"
+    },
+    {
+      "id": "gate_guard_01",
+      "position": [
+        18.0,
+        166.916,
+        5.0
+      ],
+      "type": "guard",
+      "role": "gate"
+    },
+    {
+      "id": "gate_guard_02",
+      "position": [
+        17.0,
+        166.916,
+        2.5
+      ],
+      "type": "guard",
+      "role": "gate"
+    },
+    {
+      "id": "torre_top_guard_01",
+      "position": [
+        0.0,
+        174.517,
+        -43.0
+      ],
+      "type": "guard",
+      "role": "tower"
+    },
+    {
+      "id": "torre_top_archer_01",
+      "position": [
+        3.0,
+        174.517,
+        -43.0
+      ],
+      "type": "archer",
+      "facing": "south"
+    },
+    {
+      "id": "torre_top_archer_02",
+      "position": [
+        -3.0,
+        174.517,
+        -43.0
+      ],
+      "type": "archer",
+      "facing": "north"
+    },
+    {
+      "id": "pati_d_armes_center",
+      "position": [
+        0.0,
+        161.916,
+        -10.0
+      ],
+      "type": "navigation"
+    },
+    {
+      "id": "palau_courtyard",
+      "position": [
+        0.0,
+        161.062,
+        21.0
+      ],
+      "type": "navigation"
+    },
+    {
+      "id": "player_spawn_test",
+      "position": [
+        180.0,
+        67.123,
+        -170.0
+      ],
+      "type": "player_spawn"
+    }
+  ]
+}

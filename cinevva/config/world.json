@@ -1,34 +1,43 @@
 {
-  "project": "Castalla Current",
-  "version": "native-clean-1",
+  "project": "Castalla Master V2 Playable",
+  "version": "2.0",
   "units": "meters",
   "upAxis": "Y",
-  "worldOrigin": [
-    0,
-    0,
-    0
-  ],
-  "terrain": {
-    "config": "terrain/terrain.json",
-    "heightmap": "terrain/heightmap_16bit.png",
-    "referenceModel": "terrain/terrain_reference.glb"
+  "entryModel": "models/castalla_master_v2.glb",
+  "layers": {
+    "terrain": "models/terrain.glb",
+    "castle": "models/castle.glb",
+    "rocks": "models/rocks.glb",
+    "gameplayArchitecture": "models/access_walls_gameplay.glb"
   },
-  "castle": {
-    "asset": "castle/castle.glb",
-    "placement": "castle/placement.json"
+  "collision": {
+    "terrain": "collision/terrain_collision.glb",
+    "castleAndGameplay": "collision/castle_gameplay_collision.glb"
   },
-  "loadOrder": [
-    "terrain/heightmap_16bit.png",
-    "terrain/terrain.json",
-    "castle/castle.glb",
-    "castle/placement.json"
-  ],
-  "criticalRules": [
-    "Terrain must be built from the 16-bit heightmap, not approximated from prompt text.",
-    "Castle transform is already baked into geometry.",
-    "Do not infer castle placement from terrain.",
-    "Do not normalize, fit, center, or drop the castle.",
-    "Do not flatten terrain.",
-    "Do not use terrain_reference.glb as gameplay terrain unless heightmap terrain import is impossible."
+  "anchors": "config/anchors.json",
+  "routes": "config/routes.json",
+  "importTransform": {
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "rules": [
+    "Do not move terrain and castle relative to each other.",
+    "Do not auto-center or normalize the master GLB.",
+    "Do not rebuild roads or wall-walks from prompt text.",
+    "Use anchor and route files for NPC placement and patrol logic.",
+    "Treat wall-walks and tower top as combat navigation surfaces."
   ]
 }
