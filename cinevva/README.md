@@ -1,9 +1,19 @@
-# Castell de Castalla — Current Configuration Reference v3
+# Castalla Current Topography Reference v4
 
-This package changes the previous 1244-first strategy.
+Purpose: provide Cinevva with a more recognizable present-day Cerro del Castell shape and a castle already registered to its summit.
 
-The architectural target is now the recognizable PRESENT-DAY castle configuration, regardless of construction date. It intentionally includes the Palau, Pati d'Armes and Torre Grossa together.
+## Assets
+- Castalla_Terrain_Current_Reference_v4.glb
+- Castalla_Terrain_Current_Heightmap_16bit_v4.png
+- Castalla_Castle_Current_Registered_v4.glb
+- Castalla_Hill_Access_Current_Reference_v4.glb
+- Castalla_Rock_Faces_Current_Reference_v4.glb
+- Castalla_Topography_Metadata_v4.json
+- world.json
+- CINEVVA_IMPORT_PROMPT.txt
+- SOURCES.json
 
-The geometry is based on official descriptions and published plans, but it is NOT a photogrammetric/LiDAR survey. The terrain remains the earlier prototype reference. For maximum geographic fidelity, replace it later with official high-resolution LiDAR/DEM and register a photogrammetric castle mesh to the same origin.
-
-All GLBs share one coordinate system and must be loaded at origin with unit scale.
+## Accuracy
+The summit elevation is anchored to the official 780 m a.s.l. value.
+The current hill form is reconstructed from official geographic context and current aerial visual references.
+This package is NOT a direct raw LiDAR/DEM extract. For survey-grade fidelity, the next upgrade is to replace the terrain with an official PNOA-LiDAR MDT02/MDT05 crop while preserving the same world origin and castle registration.

@@ -1,12 +1,15 @@
 {
-  "schemaVersion": "3.0",
-  "worldName": "Castalla_CurrentReference",
-  "purpose": "recognizable present-day castle geometry as the architectural reference for a medieval game environment",
+  "schemaVersion": "4.0",
+  "worldName": "Castalla_Current",
   "units": "meters",
   "axes": {
     "x": "east",
     "y": "up",
     "z": "north"
+  },
+  "originWGS84": {
+    "lat": 38.59779,
+    "lon": -0.67346
   },
   "loadTransform": {
     "position": [
@@ -27,31 +30,94 @@
   },
   "assets": [
     {
-      "file": "Castalla_Terrain_Reference_v1.glb",
+      "file": "Castalla_Terrain_Current_Reference_v4.glb",
       "role": "terrain",
-      "confidence": "prototype terrain; replace with official LiDAR/DEM for survey-level fidelity"
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
     },
     {
-      "file": "Castalla_Castle_Current_Reference_v3.glb",
-      "role": "castle current configuration",
-      "confidence": "document-based reference geometry, not photogrammetric survey"
+      "file": "Castalla_Castle_Current_Registered_v4.glb",
+      "role": "castle_current",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
     },
     {
-      "file": "Castalla_Hill_Access_Reference_v3.glb",
-      "role": "hill access",
-      "confidence": "approximate reference, not surveyed road geometry"
+      "file": "Castalla_Hill_Access_Current_Reference_v4.glb",
+      "role": "hill_access",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "file": "Castalla_Rock_Faces_Current_Reference_v4.glb",
+      "role": "rock_face_reference",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
     }
   ],
-  "castleComponents": {
-    "Palau": "north end; pseudo-rectangular; three corner towers; four levels; rooms around central courtyard/cistern; east access ramp/corridor",
-    "Pati_dArmes": "large open central enclosure; west/east wall curtains; west wall crenellations; archaeological remains",
-    "Torre_Grossa": "south end; circular; two levels; crenellated crown; current recognizable landmark"
-  },
-  "preserve": [
-    "relative Palau/Pati/Torre Grossa arrangement",
-    "elongated enclosure",
-    "east/west wall distinction",
-    "shared world registration"
-  ],
-  "warning": "This is a higher-fidelity document-based REFERENCE mesh. It is not LiDAR or photogrammetry and should not be described as centimeter-accurate."
+  "rules": [
+    "Do not independently move, rotate, or rescale the castle after import.",
+    "Preserve the compact rocky hill silhouette and the relative summit/castle alignment.",
+    "Treat access geometry as reference, not a surveyed road centerline.",
+    "Do not replace the hill with a generic mountain."
+  ]
 }

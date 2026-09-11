@@ -1,19 +1,28 @@
-Use the supplied files as the authoritative spatial reference for a recognizable Castell de Castalla scene.
+CASTALLA CURRENT TOPOGRAPHY v4
 
-Load every GLB at position [0,0,0], rotation [0,0,0], scale [1,1,1].
-Read world.json first.
+Read world.json and Castalla_Topography_Metadata_v4.json before modifying anything.
 
-PRIMARY GOAL: make a visitor familiar with the real present-day Castell de Castalla recognize the place immediately.
+Load all supplied GLBs at:
+position [0,0,0]
+rotation [0,0,0]
+scale [1,1,1]
 
-Preserve the present-day architectural configuration:
-1. Palau at the north end: pseudo-rectangular, three corner towers, four levels, rooms around a central courtyard with cistern, east-side access via rising ramp/corridor.
-2. Pati d'Armes: large elongated open space between Palau and Torre Grossa, west and east wall curtains; west wall with crenellations/loopholes, east wall without reconstructed crown; retain visible archaeological remains.
-3. Torre Grossa at the south end: circular two-level tower with crenellated crown.
+PRIMARY GOAL:
+A player familiar with the real present-day Cerro del Castell de Castalla should recognize the hill/castle relationship immediately.
 
-Do NOT replace these components with a generic fantasy castle.
-Do NOT move Palau, Pati d'Armes or Torre Grossa relative to one another.
-Do NOT rescale or rotate individual assets.
-Use realistic local limestone/masonry appearance and restrained Mediterranean vegetation.
-Remove/avoid modern visitor furniture when converting the environment into a game setting, but preserve the castle's recognizable architecture.
+Preserve:
+- the compact rocky summit;
+- steep western and southern escarpments;
+- gentler east/southeast approach;
+- current castle registered directly on the summit;
+- the overall ridge silhouette;
+- switchback-style access on the east/southeast slope.
 
-IMPORTANT: the supplied meshes are document-based reference geometry, not a photogrammetric or LiDAR survey. Do not invent fine architectural details where the reference is uncertain.
+Use realistic Mediterranean limestone, dry soil, sparse scrub and Aleppo pine vegetation.
+Do not cover major rock faces with dense forest.
+Do not flatten the summit beyond the supplied geometry.
+Do not invent a generic fantasy mountain.
+
+IMPORTANT ACCURACY RULE:
+This package is a controlled present-day topographic REFERENCE reconstruction, not a raw LiDAR survey.
+Do not claim centimetric accuracy and do not introduce fine terrain details that contradict the supplied shape.
