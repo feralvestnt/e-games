@@ -1,14 +1,19 @@
 {
-  "project": "Castalla Current Grounded Final",
-  "entry": "castalla_current_final.glb",
-  "supporting": [
-    "terrain.glb",
-    "castle_grounded.glb",
-    "foundation.glb"
+  "entry": "config/world.json",
+  "requiredFiles": [
+    "terrain/heightmap_16bit.png",
+    "terrain/terrain.json",
+    "castle/castle.glb",
+    "castle/placement.json",
+    "config/world.json"
   ],
-  "metadata": [
-    "world.json",
-    "CINEVVA_IMPORT.txt",
+  "optionalFiles": [
+    "terrain/heightmap_preview.png",
+    "terrain/terrain_reference.glb",
+    "config/validation.json"
+  ],
+  "documentation": [
+    "docs/CINEVVA_IMPORT.txt",
     "README.md"
   ]
 }

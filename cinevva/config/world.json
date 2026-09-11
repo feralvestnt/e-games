@@ -1,0 +1,34 @@
+{
+  "project": "Castalla Current",
+  "version": "native-clean-1",
+  "units": "meters",
+  "upAxis": "Y",
+  "worldOrigin": [
+    0,
+    0,
+    0
+  ],
+  "terrain": {
+    "config": "terrain/terrain.json",
+    "heightmap": "terrain/heightmap_16bit.png",
+    "referenceModel": "terrain/terrain_reference.glb"
+  },
+  "castle": {
+    "asset": "castle/castle.glb",
+    "placement": "castle/placement.json"
+  },
+  "loadOrder": [
+    "terrain/heightmap_16bit.png",
+    "terrain/terrain.json",
+    "castle/castle.glb",
+    "castle/placement.json"
+  ],
+  "criticalRules": [
+    "Terrain must be built from the 16-bit heightmap, not approximated from prompt text.",
+    "Castle transform is already baked into geometry.",
+    "Do not infer castle placement from terrain.",
+    "Do not normalize, fit, center, or drop the castle.",
+    "Do not flatten terrain.",
+    "Do not use terrain_reference.glb as gameplay terrain unless heightmap terrain import is impossible."
+  ]
+}

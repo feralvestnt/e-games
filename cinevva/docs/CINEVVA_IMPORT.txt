@@ -1,0 +1,58 @@
+CASTALLA CURRENT - CLEAN IMPORT
+
+START FROM AN EMPTY PROJECT / EMPTY SCENE.
+DO NOT USE ANY PREVIOUS CASTALLA FILES.
+
+1) TERRAIN
+Use:
+terrain/heightmap_16bit.png
+and:
+terrain/terrain.json
+
+Create terrain using EXACTLY:
+width X = 900 meters
+depth Z = 900 meters
+vertical height range = 161.794 meters
+Y-up
+world origin = 0,0,0
+
+IMPORTANT:
+- do not flatten;
+- do not normalize terrain height;
+- do not rescale it to fit the scene;
+- do not replace it with a generic hill;
+- do not infer terrain from text.
+
+2) CASTLE
+Load:
+castle/castle.glb
+
+Read:
+castle/placement.json
+
+The castle geometry already contains its final spatial coordinates.
+Use:
+position 0,0,0
+rotation 0,0,0
+scale 1,1,1
+
+IMPORTANT:
+- DO NOT use drop-to-ground;
+- DO NOT auto-center;
+- DO NOT move the castle in Y;
+- DO NOT fit castle to terrain;
+- DO NOT recompute its transform.
+
+3) VALIDATION
+Before adding vegetation, materials, NPCs, roads, lighting effects or gameplay:
+- confirm the hill has strong vertical relief;
+- confirm the castle touches / penetrates the summit;
+- confirm there is no visible gap under the castle;
+- confirm the castle is not floating.
+
+4) REFERENCE
+terrain/terrain_reference.glb is visual reference only.
+Use it only to compare shape if the generated heightmap terrain looks wrong.
+
+STOP after validation.
+Do not beautify or modify geometry until the terrain/castle relationship is confirmed.

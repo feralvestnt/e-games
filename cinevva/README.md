@@ -1,18 +1,35 @@
-# Castalla Current Grounded Final
+# Castalla Cinevva Native
 
-This package is designed specifically to eliminate the "floating castle" problem.
+This is the clean replacement package.
 
-The primary file is:
-`castalla_current_final.glb`
+Delete all previous Castalla terrain/castle files from the repository before using this package.
 
-It already contains terrain + a hidden/overlapping summit foundation + the castle, all merged into one GLB.
+## Repository structure
 
-The castle has been lowered slightly into the summit and foundation on purpose. This avoids visual gaps caused by irregular terrain under a flat architectural base.
+Castalla/
+├── terrain/
+│   ├── heightmap_16bit.png
+│   ├── heightmap_preview.png
+│   ├── terrain.json
+│   └── terrain_reference.glb
+├── castle/
+│   ├── castle.glb
+│   └── placement.json
+├── config/
+│   ├── world.json
+│   └── validation.json
+├── docs/
+│   └── CINEVVA_IMPORT.txt
+├── manifest.json
+└── README.md
 
-For Cinevva:
-- import only the final GLB first;
-- keep position/rotation at zero;
-- keep scale at 1;
-- do not use auto-ground / drop-to-terrain behavior.
+## Primary workflow
 
-Optional files are included only for manual editing.
+1. Build terrain from the 16-bit heightmap.
+2. Apply the exact dimensions in terrain.json.
+3. Load castle.glb at identity transform.
+4. Never use automatic ground placement for the castle.
+5. Validate terrain/castle contact before adding anything else.
+
+The heightmap is the primary terrain source.
+The GLB terrain file exists only as a visual reference / fallback.

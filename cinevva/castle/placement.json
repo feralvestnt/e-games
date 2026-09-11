@@ -1,0 +1,46 @@
+{
+  "asset": "castle.glb",
+  "units": "meters",
+  "position": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "rotationDegrees": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "scale": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "placementMode": "absolute",
+  "transformBakedIntoGeometry": true,
+  "geometryInfo": {
+    "boundsMin": [
+      -20.062,
+      157.42,
+      -55.477
+    ],
+    "boundsMax": [
+      27.061,
+      182.96,
+      37.723
+    ],
+    "centroid": [
+      0.0,
+      172.021,
+      5.0
+    ],
+    "bottomY": 157.42
+  },
+  "rules": [
+    "Do not use drop-to-ground.",
+    "Do not auto-center.",
+    "Do not change Y position.",
+    "Do not independently rescale or rotate this asset.",
+    "Use baked geometry coordinates exactly as exported."
+  ]
+}
