@@ -1,17 +1,15 @@
 {
-  "schemaVersion": "4.0",
-  "worldName": "Castalla_Current",
+  "format": "castalla-current-compatible-1",
+  "authoritativeFile": "castalla_current.glb",
   "units": "meters",
-  "axes": {
-    "x": "east",
-    "y": "up",
-    "z": "north"
-  },
-  "originWGS84": {
-    "lat": 38.59779,
-    "lon": -0.67346
-  },
-  "loadTransform": {
+  "upAxis": "Y",
+  "forwardAxis": "-Z",
+  "origin": [
+    0,
+    0,
+    0
+  ],
+  "importTransform": {
     "position": [
       0,
       0,
@@ -28,96 +26,68 @@
       1
     ]
   },
-  "assets": [
-    {
-      "file": "Castalla_Terrain_Current_Reference_v4.glb",
-      "role": "terrain",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      }
-    },
-    {
-      "file": "Castalla_Castle_Current_Registered_v4.glb",
-      "role": "castle_current",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      }
-    },
-    {
-      "file": "Castalla_Hill_Access_Current_Reference_v4.glb",
-      "role": "hill_access",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      }
-    },
-    {
-      "file": "Castalla_Rock_Faces_Current_Reference_v4.glb",
-      "role": "rock_face_reference",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      }
-    }
-  ],
+  "files": {
+    "castalla_current.glb": "PRIMARY: terrain and castle already merged and aligned",
+    "terrain.glb": "OPTIONAL: same terrain as primary scene, separated",
+    "castle.glb": "OPTIONAL: same castle as primary scene, separated"
+  },
   "rules": [
-    "Do not independently move, rotate, or rescale the castle after import.",
-    "Preserve the compact rocky hill silhouette and the relative summit/castle alignment.",
-    "Treat access geometry as reference, not a surveyed road centerline.",
-    "Do not replace the hill with a generic mountain."
-  ]
+    "Prefer castalla_current.glb.",
+    "Do not auto-center the castle separately.",
+    "Do not normalize or rescale individual assets.",
+    "Do not rotate terrain or castle independently.",
+    "If separate files are used, load terrain.glb and castle.glb both at origin with identity transform.",
+    "Do not generate a replacement castle or replacement hill."
+  ],
+  "validation": {
+    "terrain.glb": {
+      "vertices": 32761,
+      "faces": 64800,
+      "bounds": [
+        [
+          -450.0,
+          0.0,
+          -450.0
+        ],
+        [
+          450.0,
+          161.794,
+          450.0
+        ]
+      ]
+    },
+    "castle.glb": {
+      "vertices": 564,
+      "faces": 912,
+      "bounds": [
+        [
+          -20.062,
+          159.574,
+          -55.477
+        ],
+        [
+          27.061,
+          185.114,
+          37.723
+        ]
+      ]
+    },
+    "castalla_current.glb": {
+      "vertices": 33325,
+      "faces": 65712,
+      "bounds": [
+        [
+          -450.0,
+          0.0,
+          -450.0
+        ],
+        [
+          450.0,
+          185.114,
+          450.0
+        ]
+      ]
+    }
+  },
+  "accuracyNote": "Current recognizable Castalla reference; terrain is a controlled reconstruction, not raw LiDAR survey."
 }
