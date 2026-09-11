@@ -1,25 +1,34 @@
-IMPORT CASTALLA CURRENT SCENE
+CASTALLA FINAL GROUNDED IMPORT
 
-Use castalla_current.glb as the PRIMARY and authoritative scene.
+Use ONLY:
+castalla_current_final.glb
 
-IMPORTANT:
-- The castle and hill are already aligned inside this GLB.
-- Import it exactly at position 0,0,0.
-- Rotation 0,0,0.
-- Scale 1,1,1.
-- Units are meters.
-- Y is up.
-- Do NOT auto-center, fit-to-ground, normalize, rotate, or rescale the castle separately.
-- Do NOT replace the hill with a generic mountain.
-- Do NOT replace the castle with a generic medieval castle.
+This file already contains:
+- the hill,
+- the castle,
+- the summit terrace/foundation,
+all merged in one spatially grounded scene.
 
-terrain.glb and castle.glb are provided only as optional separated copies.
-If you use them instead of castalla_current.glb, load BOTH at 0,0,0 with rotation 0,0,0 and scale 1,1,1.
+Import exactly at:
+position 0,0,0
+rotation 0,0,0
+scale 1,1,1
 
-First task:
-1. Load castalla_current.glb.
-2. Add collisions.
-3. Add a neutral daylight sky.
-4. Add an inspection camera / third-person character.
-5. Preserve all geometry exactly.
-6. Do not add vegetation or architectural details until visual alignment is confirmed.
+DO NOT:
+- place the castle on the terrain automatically;
+- run a "drop to ground" operation;
+- auto-center castle pieces;
+- separate the castle from the terrain;
+- rescale terrain or castle;
+- replace the hill or castle.
+
+The castle intentionally overlaps the foundation and penetrates the summit slightly.
+This is required to avoid visible floating gaps.
+
+FIRST PASS:
+1. load castalla_current_final.glb;
+2. add camera;
+3. add collisions;
+4. apply neutral light;
+5. verify there is no visible gap between castle and hill;
+6. do not modify geometry yet.

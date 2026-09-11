@@ -1,14 +1,14 @@
 {
-  "project": "Castalla Current",
-  "entry": "castalla_current.glb",
-  "assets": [
-    "castalla_current.glb",
+  "project": "Castalla Current Grounded Final",
+  "entry": "castalla_current_final.glb",
+  "supporting": [
     "terrain.glb",
-    "castle.glb"
+    "castle_grounded.glb",
+    "foundation.glb"
   ],
   "metadata": [
     "world.json",
-    "README.md",
-    "CINEVVA_IMPORT.txt"
+    "CINEVVA_IMPORT.txt",
+    "README.md"
   ]
 }

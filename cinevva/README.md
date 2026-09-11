@@ -1,25 +1,18 @@
-# Castalla Current — Compatibility Package
+# Castalla Current Grounded Final
 
-This replaces the previous Castalla terrain/castle packages.
+This package is designed specifically to eliminate the "floating castle" problem.
 
-Use `castalla_current.glb` first. It contains the hill and current castle already merged in one GLB with transforms baked into the geometry.
+The primary file is:
+`castalla_current_final.glb`
 
-Why this package is simpler:
-- no parent transforms;
-- no offsets that Cinevva must interpret;
-- no versioned asset names;
-- no external textures;
-- no dependency between files;
-- meters and Y-up;
-- terrain and castle are already aligned.
+It already contains terrain + a hidden/overlapping summit foundation + the castle, all merged into one GLB.
 
-Optional separated assets:
-- `terrain.glb`
-- `castle.glb`
+The castle has been lowered slightly into the summit and foundation on purpose. This avoids visual gaps caused by irregular terrain under a flat architectural base.
 
-If separated assets are used, both must be imported with identity transforms:
-position 0,0,0
-rotation 0,0,0
-scale 1,1,1
+For Cinevva:
+- import only the final GLB first;
+- keep position/rotation at zero;
+- keep scale at 1;
+- do not use auto-ground / drop-to-terrain behavior.
 
-Do not keep older Castalla GLBs in the same repository if Cinevva is selecting files automatically.
+Optional files are included only for manual editing.

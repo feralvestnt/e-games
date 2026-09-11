@@ -1,14 +1,8 @@
 {
-  "format": "castalla-current-compatible-1",
-  "authoritativeFile": "castalla_current.glb",
+  "format": "castalla-grounded-final-1",
+  "entry": "castalla_current_final.glb",
   "units": "meters",
   "upAxis": "Y",
-  "forwardAxis": "-Z",
-  "origin": [
-    0,
-    0,
-    0
-  ],
   "importTransform": {
     "position": [
       0,
@@ -26,20 +20,43 @@
       1
     ]
   },
+  "grounding": {
+    "method": "castle intentionally sunk into summit plus overlapping terrace/foundation volumes",
+    "castleVerticalShiftMeters": -2.154,
+    "intentionalPenetrationMeters": 1.4,
+    "castleBottomY": 157.42,
+    "terrainYAtCastleCenter": 158.763
+  },
   "files": {
-    "castalla_current.glb": "PRIMARY: terrain and castle already merged and aligned",
-    "terrain.glb": "OPTIONAL: same terrain as primary scene, separated",
-    "castle.glb": "OPTIONAL: same castle as primary scene, separated"
+    "castalla_current_final.glb": "PRIMARY: merged hill + foundation + grounded castle",
+    "terrain.glb": "optional edit copy",
+    "castle_grounded.glb": "optional edit copy",
+    "foundation.glb": "optional edit copy"
   },
   "rules": [
-    "Prefer castalla_current.glb.",
-    "Do not auto-center the castle separately.",
-    "Do not normalize or rescale individual assets.",
-    "Do not rotate terrain or castle independently.",
-    "If separate files are used, load terrain.glb and castle.glb both at origin with identity transform.",
-    "Do not generate a replacement castle or replacement hill."
+    "Use castalla_current_final.glb only for first import.",
+    "Do not auto-place the castle on terrain.",
+    "Do not apply physics settle-to-ground to castle geometry.",
+    "Do not normalize or rescale individual submeshes.",
+    "Do not separate the castle from the summit."
   ],
   "validation": {
+    "castalla_current_final.glb": {
+      "vertices": 33357,
+      "faces": 65760,
+      "bounds": [
+        [
+          -450.0,
+          0.0,
+          -450.0
+        ],
+        [
+          450.0,
+          182.96,
+          450.0
+        ]
+      ]
+    },
     "terrain.glb": {
       "vertices": 32761,
       "faces": 64800,
@@ -56,38 +73,37 @@
         ]
       ]
     },
-    "castle.glb": {
+    "castle_grounded.glb": {
       "vertices": 564,
       "faces": 912,
       "bounds": [
         [
           -20.062,
-          159.574,
+          157.42,
           -55.477
         ],
         [
           27.061,
-          185.114,
+          182.96,
           37.723
         ]
       ]
     },
-    "castalla_current.glb": {
-      "vertices": 33325,
-      "faces": 65712,
+    "foundation.glb": {
+      "vertices": 32,
+      "faces": 48,
       "bounds": [
         [
-          -450.0,
-          0.0,
-          -450.0
+          -22.0,
+          155.621,
+          -52.0
         ],
         [
-          450.0,
-          185.114,
-          450.0
+          23.561,
+          159.42,
+          37.0
         ]
       ]
     }
-  },
-  "accuracyNote": "Current recognizable Castalla reference; terrain is a controlled reconstruction, not raw LiDAR survey."
+  }
 }
