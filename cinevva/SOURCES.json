@@ -2,19 +2,18 @@
   "sources": [
     {
       "title": "Ayuntamiento de Castalla — Monumentos",
-      "url": "https://www.castalla.org/la-ciudad/monumentos/"
+      "url": "https://www.castalla.org/la-ciudad/monumentos/",
+      "use": "current castle components and architectural descriptions"
     },
     {
-      "title": "Guía del Castell de Castalla",
-      "url": "https://patrimoniocultural.castalla.org/wp-content/uploads/sites/5/2013/01/guia-castella.pdf"
+      "title": "Official Castell de Castalla guide / plan",
+      "url": "https://www.castalla.org/wp-content/uploads/2014/06/GuiaCastellCastalla_CAS.pdf",
+      "use": "plan and restored/current Pati d'Armes configuration"
     },
     {
-      "title": "BOE-A-2013-3281",
-      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2013-3281"
-    },
-    {
-      "title": "MARQ — Arqueología e Historia del Castillo de Castalla",
-      "url": "https://marqalicante.com/contenido/publicaciones/pub2_81.pdf"
+      "title": "MARQ — El Castell de Castalla",
+      "url": "https://marqalicante.com/contenido/publicaciones/pub2_81.pdf",
+      "use": "archaeological planimetry and restoration context"
     }
   ]
 }

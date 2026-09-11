@@ -1,142 +1,57 @@
 {
-  "schemaVersion": "2.0",
-  "worldName": "Castalla_1244",
+  "schemaVersion": "3.0",
+  "worldName": "Castalla_CurrentReference",
+  "purpose": "recognizable present-day castle geometry as the architectural reference for a medieval game environment",
   "units": "meters",
   "axes": {
     "x": "east",
     "y": "up",
     "z": "north"
   },
-  "sharedOrigin": [
-    0,
-    0,
-    0
-  ],
-  "assets": [
-    {
-      "file": "Castalla_Terrain_v1.glb",
-      "type": "terrain",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "confidence": "reference reconstruction"
-    },
-    {
-      "file": "Castalla_Castle_1244_v1.glb",
-      "type": "castle",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "confidence": "historically informed game reconstruction"
-    },
-    {
-      "file": "Castalla_Village_1244_v1.glb",
-      "type": "village",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "confidence": "approximate spatial reconstruction"
-    },
-    {
-      "file": "Castalla_Roads_1244_v1.glb",
-      "type": "roads",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "confidence": "approximate gameplay reconstruction"
-    },
-    {
-      "file": "Castalla_Props_1244_v1.glb",
-      "type": "props",
-      "transform": {
-        "position": [
-          0,
-          0,
-          0
-        ],
-        "rotation": [
-          0,
-          0,
-          0
-        ],
-        "scale": [
-          1,
-          1,
-          1
-        ]
-      },
-      "confidence": "generic period-compatible placeholders"
-    }
-  ],
-  "historicalRules": {
-    "targetYear": 1244,
-    "exclude": [
-      "later 14th-15th c. Palau form",
-      "Torre Grossa (1529)",
-      "modern restoration elements"
+  "loadTransform": {
+    "position": [
+      0,
+      0,
+      0
     ],
-    "include": [
-      "Andalusi military enclosure",
-      "11th-century cistern",
-      "12th–1244 Muslim domestic structures",
-      "population nucleus on south/east slopes"
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
     ]
   },
-  "cinevvaRule": "Load all GLBs at [0,0,0], rotation [0,0,0], scale [1,1,1]. Their registration is intentional."
+  "assets": [
+    {
+      "file": "Castalla_Terrain_Reference_v1.glb",
+      "role": "terrain",
+      "confidence": "prototype terrain; replace with official LiDAR/DEM for survey-level fidelity"
+    },
+    {
+      "file": "Castalla_Castle_Current_Reference_v3.glb",
+      "role": "castle current configuration",
+      "confidence": "document-based reference geometry, not photogrammetric survey"
+    },
+    {
+      "file": "Castalla_Hill_Access_Reference_v3.glb",
+      "role": "hill access",
+      "confidence": "approximate reference, not surveyed road geometry"
+    }
+  ],
+  "castleComponents": {
+    "Palau": "north end; pseudo-rectangular; three corner towers; four levels; rooms around central courtyard/cistern; east access ramp/corridor",
+    "Pati_dArmes": "large open central enclosure; west/east wall curtains; west wall crenellations; archaeological remains",
+    "Torre_Grossa": "south end; circular; two levels; crenellated crown; current recognizable landmark"
+  },
+  "preserve": [
+    "relative Palau/Pati/Torre Grossa arrangement",
+    "elongated enclosure",
+    "east/west wall distinction",
+    "shared world registration"
+  ],
+  "warning": "This is a higher-fidelity document-based REFERENCE mesh. It is not LiDAR or photogrammetry and should not be described as centimeter-accurate."
 }

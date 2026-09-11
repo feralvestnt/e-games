@@ -1,25 +1,19 @@
-Read world.json and README_WORLD.md first.
+Use the supplied files as the authoritative spatial reference for a recognizable Castell de Castalla scene.
 
-Create a playable historical Castalla scene circa 1244 using:
-- Castalla_Terrain_v1.glb
-- Castalla_Castle_1244_v1.glb
-- Castalla_Village_1244_v1.glb
-- Castalla_Roads_1244_v1.glb
-- Castalla_Props_1244_v1.glb
+Load every GLB at position [0,0,0], rotation [0,0,0], scale [1,1,1].
+Read world.json first.
 
-Load EVERY file at position [0,0,0], rotation [0,0,0], scale [1,1,1].
-They are already registered in one shared coordinate system.
+PRIMARY GOAL: make a visitor familiar with the real present-day Castell de Castalla recognize the place immediately.
 
-Do not guess new positions.
-Do not add Torre Grossa (1529).
-Do not represent the later 14th–15th century Palau as if already present.
-Do not add fantasy architecture.
+Preserve the present-day architectural configuration:
+1. Palau at the north end: pseudo-rectangular, three corner towers, four levels, rooms around a central courtyard with cistern, east-side access via rising ramp/corridor.
+2. Pati d'Armes: large elongated open space between Palau and Torre Grossa, west and east wall curtains; west wall with crenellations/loopholes, east wall without reconstructed crown; retain visible archaeological remains.
+3. Torre Grossa at the south end: circular two-level tower with crenellated crown.
 
-For the first pass only:
-- apply plausible Mediterranean materials,
-- add daylight/sky,
-- add restrained period-appropriate vegetation,
-- add collisions and walkable surfaces,
-- add a controllable third-person inspection character.
+Do NOT replace these components with a generic fantasy castle.
+Do NOT move Palau, Pati d'Armes or Torre Grossa relative to one another.
+Do NOT rescale or rotate individual assets.
+Use realistic local limestone/masonry appearance and restrained Mediterranean vegetation.
+Remove/avoid modern visitor furniture when converting the environment into a game setting, but preserve the castle's recognizable architecture.
 
-Preserve geometry until explicitly asked to modify it.
+IMPORTANT: the supplied meshes are document-based reference geometry, not a photogrammetric or LiDAR survey. Do not invent fine architectural details where the reference is uncertain.
