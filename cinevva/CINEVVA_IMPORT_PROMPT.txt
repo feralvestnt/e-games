@@ -1,27 +1,25 @@
-Use the supplied Castalla terrain package as an authoritative geographic reference.
+Read world.json and README_WORLD.md first.
 
-Read `README_WORLD.md` and `world.json` before changing the scene.
+Create a playable historical Castalla scene circa 1244 using:
+- Castalla_Terrain_v1.glb
+- Castalla_Castle_1244_v1.glb
+- Castalla_Village_1244_v1.glb
+- Castalla_Roads_1244_v1.glb
+- Castalla_Props_1244_v1.glb
 
-Import `Castalla_Hill_Reference_Yup.glb` at:
-- position: [0, 0, 0]
-- rotation: [0, 0, 0]
-- scale: [1, 1, 1]
+Load EVERY file at position [0,0,0], rotation [0,0,0], scale [1,1,1].
+They are already registered in one shared coordinate system.
 
-The model uses meters, Y-up, X positive east, Z positive north.
+Do not guess new positions.
+Do not add Torre Grossa (1529).
+Do not represent the later 14th–15th century Palau as if already present.
+Do not add fantasy architecture.
 
-IMPORTANT:
-- Do not generate a castle yet.
-- Do not generate a village yet.
-- Do not flatten, reshape, rotate or rescale the terrain.
-- Do not invent historical structures.
-- Keep the terrain as a separate reusable asset.
-- Treat `world.json` as authoritative scene metadata.
+For the first pass only:
+- apply plausible Mediterranean materials,
+- add daylight/sky,
+- add restrained period-appropriate vegetation,
+- add collisions and walkable surfaces,
+- add a controllable third-person inspection character.
 
-For this first step, only create a clean playable inspection scene around the supplied terrain:
-1. neutral daylight,
-2. a sky/environment,
-3. a controllable inspection camera or player,
-4. conservative Mediterranean ground/rock materials if they can be applied non-destructively,
-5. no permanent vegetation or roads unless explicitly requested later.
-
-The future historical castle and village will be provided as separate registered GLB assets that share the same coordinate system.
+Preserve geometry until explicitly asked to modify it.

@@ -1,104 +1,142 @@
 {
-  "schemaVersion": "1.0",
-  "worldName": "CastallaHistoricalWorld",
-  "status": "terrain-only",
-  "purpose": "Authoritative terrain base for a historically grounded Castalla game scene.",
-  "coordinateSystem": {
-    "handedness": "right-handed",
-    "upAxis": "Y",
-    "xAxis": "East-West (positive East)",
-    "zAxis": "North-South (positive North)",
-    "units": "meters",
-    "originPolicy": "Shared world origin for all future Castalla assets."
+  "schemaVersion": "2.0",
+  "worldName": "Castalla_1244",
+  "units": "meters",
+  "axes": {
+    "x": "east",
+    "y": "up",
+    "z": "north"
   },
-  "geographicReference": {
-    "castleAreaApproxWGS84": {
-      "latitude": 38.59779,
-      "longitude": -0.67346
+  "sharedOrigin": [
+    0,
+    0,
+    0
+  ],
+  "assets": [
+    {
+      "file": "Castalla_Terrain_v1.glb",
+      "type": "terrain",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "confidence": "reference reconstruction"
     },
-    "summitReferenceAbsoluteElevationMeters": 780.0,
-    "note": "Geographic values are reference metadata. The GLB itself uses local game coordinates."
-  },
-  "terrain": {
-    "file": "Castalla_Hill_Reference_Yup.glb",
-    "authoritative": true,
-    "transform": {
-      "position": [
-        0,
-        0,
-        0
-      ],
-      "rotationRadians": [
-        0,
-        0,
-        0
-      ],
-      "scale": [
-        1,
-        1,
-        1
-      ]
+    {
+      "file": "Castalla_Castle_1244_v1.glb",
+      "type": "castle",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "confidence": "historically informed game reconstruction"
     },
-    "boundsMeters": [
-      [
-        -400.0,
-        0.0,
-        -400.0
-      ],
-      [
-        400.0,
-        105.0,
-        400.0
-      ]
+    {
+      "file": "Castalla_Village_1244_v1.glb",
+      "type": "village",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "confidence": "approximate spatial reconstruction"
+    },
+    {
+      "file": "Castalla_Roads_1244_v1.glb",
+      "type": "roads",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "confidence": "approximate gameplay reconstruction"
+    },
+    {
+      "file": "Castalla_Props_1244_v1.glb",
+      "type": "props",
+      "transform": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "confidence": "generic period-compatible placeholders"
+    }
+  ],
+  "historicalRules": {
+    "targetYear": 1244,
+    "exclude": [
+      "later 14th-15th c. Palau form",
+      "Torre Grossa (1529)",
+      "modern restoration elements"
     ],
-    "preservationRules": [
-      "Do not flatten the summit.",
-      "Do not reshape the ridge.",
-      "Do not alter the overall hill proportions.",
-      "Do not rescale the terrain.",
-      "Keep this terrain as a separate asset."
+    "include": [
+      "Andalusi military enclosure",
+      "11th-century cistern",
+      "12th–1244 Muslim domestic structures",
+      "population nucleus on south/east slopes"
     ]
   },
-  "anchors": {
-    "terrain_highest_vertex": {
-      "position": [
-        22.22222137451172,
-        105.0,
-        4.44444465637207
-      ],
-      "usage": "Diagnostic reference only; not automatically the castle origin."
-    },
-    "summit_reference_centroid": {
-      "position": [
-        15.067750628401594,
-        102.83189722386803,
-        4.092140860673858
-      ],
-      "usage": "Provisional spatial reference for future castle registration."
-    }
-  },
-  "futureAssets": {
-    "castle1244": {
-      "status": "not-yet-supplied",
-      "placementPolicy": "The future castle GLB must share this world coordinate system. Preferred workflow: export the castle already registered to this terrain so both terrain and castle load at position [0,0,0], rotation [0,0,0], scale [1,1,1].",
-      "doNot": [
-        "Do not let AI invent castle placement.",
-        "Do not infer final castle rotation only from visual appearance.",
-        "Do not modify terrain to force-fit the castle."
-      ]
-    },
-    "village1244": {
-      "status": "not-yet-supplied",
-      "placementPolicy": "Use the same world origin and meter scale as terrain and castle."
-    }
-  },
-  "cinevvaImportRules": [
-    "Load Castalla_Hill_Reference_Yup.glb at world origin.",
-    "Keep position, rotation and scale unchanged.",
-    "Do not generate a castle or village yet.",
-    "Do not redesign the hill.",
-    "Treat world.json as authoritative scene metadata.",
-    "When future registered GLBs are supplied, preserve their transforms exactly."
-  ],
-  "fidelityWarning": "This terrain is a game-reference reconstruction, not a survey-grade LiDAR/DEM model. Replace/refine with official high-resolution terrain data later if exact topographic fidelity is required."
+  "cinevvaRule": "Load all GLBs at [0,0,0], rotation [0,0,0], scale [1,1,1]. Their registration is intentional."
 }
