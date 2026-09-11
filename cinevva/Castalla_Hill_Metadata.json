@@ -1,0 +1,28 @@
+{
+  "name": "Castalla Hill Reference Terrain",
+  "purpose": "Reference terrain for Cinevva / browser game scene; castle and village intentionally excluded.",
+  "center_wgs84": {
+    "latitude": 38.59779,
+    "longitude": -0.67346
+  },
+  "reference_summit_absolute_elevation_m": 780.0,
+  "local_base_absolute_elevation_estimate_m": 675.0,
+  "tile_size_m": [
+    800.0,
+    800.0
+  ],
+  "mesh_resolution": [
+    181,
+    181
+  ],
+  "vertex_count": 32761,
+  "triangle_count": 64800,
+  "coordinate_system": {
+    "units": "meters",
+    "x": "east",
+    "y": "up",
+    "z": "north",
+    "origin": "terrain tile center near Castell de Castalla"
+  },
+  "important_note": "This is a game-reference reconstruction derived from public location/elevation facts and aerial visual references, not a survey-grade IGN LiDAR/DEM reconstruction. The 780 m summit reference is documented by Castalla's municipal site. Use an official high-resolution DEM/LiDAR later if centimeter/meter survey fidelity is required."
+}

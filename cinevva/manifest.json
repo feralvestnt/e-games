@@ -1,0 +1,12 @@
+{
+  "package": "Castalla Cinevva Terrain Package",
+  "version": "1.1",
+  "entrypointMetadata": "world.json",
+  "primary3DAsset": "Castalla_Hill_Reference_Yup.glb",
+  "humanInstructions": "README_WORLD.md",
+  "cinevvaPrompt": "CINEVVA_IMPORT_PROMPT.txt",
+  "futureExpectedAssets": [
+    "Castalla_Castle_1244_Registered.glb",
+    "Castalla_Village_1244_Registered.glb"
+  ]
+}
