@@ -1,0 +1,39 @@
+Create a NEW production-quality 3D character asset from REFERENCE.png.
+
+Character: medieval Templar knight.
+Target: Cinevva asset-gallery quality, game ready.
+
+Requirements:
+- Generate a new detailed humanoid character; do NOT merely refine or subdivide an old low-poly mesh.
+- Approx. human height: 1.82–1.88 m.
+- Neutral A-pose as bind pose.
+- White/ivory worn surcoat and mantle with red cross.
+- Chainmail visible beneath cloth.
+- Historically inspired great helm, leather belt, boots, gauntlets.
+- Separate sword and shield meshes.
+- PBR materials: albedo/base-color, normal, roughness, metallic, AO where supported.
+- Optimized topology suitable for a browser game.
+- Humanoid rig with clean skin weights.
+- Keep equipment attached correctly during animation.
+- No floating armor, cloth, sword, shield or helmet.
+- Preserve realistic medieval proportions and avoid fantasy oversized armor.
+- Export as GLB/GLTF 2.0, Y-up, meters.
+- Prefer one self-contained GLB with embedded or correctly referenced textures.
+
+Required animation clips:
+Idle (loop)
+Walk (loop)
+Run (loop)
+Sword_Attack_01
+Sword_Attack_02
+Shield_Block
+Hit_Reaction
+Death
+
+Validation:
+- Preview front, left, back and right.
+- Preview Idle, Walk, Run, Sword_Attack_01, Shield_Block and Death.
+- Feet must remain grounded during locomotion.
+- Shield should be attached to left arm/hand.
+- Sword should be attachable to right hand and right-hip sheath.
+- Do not replace the intended historical visual identity.

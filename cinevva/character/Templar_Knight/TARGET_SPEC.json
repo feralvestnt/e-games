@@ -1,0 +1,11 @@
+{
+  "asset_name": "Templar Knight",
+  "target_format": "GLB 2.0",
+  "up_axis": "Y",
+  "units": "meters",
+  "target_triangles_lod0": "30000-80000",
+  "textures_master": "4K",
+  "textures_runtime": "2K-4K",
+  "rig": "humanoid",
+  "delivery": "single self-contained GLB preferred"
+}

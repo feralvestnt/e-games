@@ -1,0 +1,43 @@
+Create a NEW production-quality 3D character asset from REFERENCE.png.
+
+Character: Polish-Lithuanian Winged Hussar.
+Target: Cinevva asset-gallery quality, game ready.
+
+Requirements:
+- Generate a new detailed humanoid character; do NOT merely refine or subdivide an old low-poly mesh.
+- Approx. human height: 1.82–1.88 m, excluding wings.
+- Neutral A-pose as bind pose.
+- Polished steel armor with crimson garments and leather equipment.
+- Two historically inspired feathered wing frames mounted firmly to the back/upper torso.
+- Separate sabre and long lance meshes.
+- PBR materials: albedo/base-color, normal, roughness, metallic, AO where supported.
+- Optimized topology suitable for a browser game.
+- Humanoid rig with clean skin weights.
+- Wing assemblies should remain rigidly attached to upper torso during locomotion.
+- Avoid wings colliding badly with arms during basic animation.
+- No floating armor, wings, sabre, lance or helmet.
+- Export as GLB/GLTF 2.0, Y-up, meters.
+- Prefer one self-contained GLB with embedded or correctly referenced textures.
+
+Required animation clips:
+Idle (loop)
+Walk (loop)
+Run (loop)
+Sabre_Attack_01
+Sabre_Attack_02
+Lance_Thrust
+Block
+Hit_Reaction
+Death
+
+Optional mounted clips:
+Mounted_Idle
+Mounted_Lance_Charge
+
+Validation:
+- Preview front, left, back and right.
+- Preview Idle, Walk, Run, Sabre_Attack_01, Lance_Thrust and Death.
+- Feet must remain grounded during locomotion.
+- Sabre should switch between right hand and right-hip sheath.
+- Lance should attach to right-hand lance socket.
+- Both wing assemblies must remain attached at all times.
